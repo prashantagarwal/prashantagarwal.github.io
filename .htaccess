@@ -1,0 +1,6 @@
+Options -Indexes
+ErrorDocument 401 /Portfolio/cvcard/404.html
+ErrorDocument 400 /Portfolio/cvcard/404.html
+ErrorDocument 404 /Portfolio/cvcard/404.html
+ErrorDocument 403 /Portfolio/cvcard/404.html
+ErrorDocument 500 /Portfolio/cvcard/404.html
