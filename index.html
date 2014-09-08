@@ -682,19 +682,9 @@
 
         <script src="js/jquery-1.10.2.min.js"></script>
         <script src="js/nprogress/nprogress.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false" defer='defer'></script>
         <script src="js/main.js"></script>
-		<script type="text/javascript">
-function downloadJSAtOnload() {
-var element = document.createElement("script");
-element.src = "https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false";
-document.body.appendChild(element);
-}
-if (window.addEventListener)
-window.addEventListener("load", downloadJSAtOnload, false);
-else if (window.attachEvent)
-window.attachEvent("onload", downloadJSAtOnload);
-else window.onload = downloadJSAtOnload;
-</script>
+		
 
 	</body>
 </html>
