@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js single-page-layout" data-classic-layout="false" data-mobile-only-classic-layout="true" data-inAnimation="fadeInUp" data-outAnimation="fadeOutDownBig">	
+
+<head>
+    
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Prashant Agrawal">
+        <meta name="keywords" content="vcard, html5, portfolio, resume, cv, blog">
+        <meta name="author" content="Prashant Agrawal">
+
+        <title>Prashant Agrawal</title>
+
+        <link rel="shortcut icon" href="../images/ico/favicon.png">
+        <link rel="apple-touch-icon" href="../images/ico/avatar3.png"/>
+		
+		<script src="../js/modernizr.custom.js" defer></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../js/nprogress/nprogress.css">
+        <link rel="stylesheet" type="text/css" href="../css/fonts/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/fonts/fontello/css/fontello.css">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        
+        <!--[if lte IE 9]>
+            <script src="../js/html5shiv.js"></script>
+            <script src="../js/respond.min.js"></script>
+            <script src="../js/selectivizr-min.js"></script>
+        <![endif]--> 
+		
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53903115-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+	</head>
+	<body>
+		<div class="container" id="container">
+            <header class="header">
+            
+                <img src="../images/site/avatar3.png" alt="avatar">
+				<h1 style="color:#FFFFFF"><b>Prashant Agrawal</b></h1>
+                <p>Software Engineer/ Web Designer/ Developer</p>
+
+                <ul class="vs-nav">
+                    	<li><a href="../index.html#/blog"><i title="back to blog" class="icon-left-open tooltip" data-tooltip-pos="left"></i></a></li>
+                    	<li><a href="../index.html"><i title="go to home" class="icon-home-1 tooltip" data-tooltip-pos="right"></i></a></li>
+                </ul>
+
+			</header>
+
+			<div class="wrapper">
+
+                <div class="readable-content blog-single ">
+
+                    <article class="post type-post format-standard hentry">
+
+                      <header class="entry-header">
+                        <h1 class="entry-title">THE EXTENSIVE LIST FOR WEB DEVELOPERS</h1>
+                      </header>
+                      
+                      <div class="entry-meta">          	
+                            
+                            <span class="posted-on">
+                                on 
+                                <a href="#" title="11:15 pm" rel="bookmark"><time class="entry-date" datetime="2014-09-01T23:15:57+00:00">September 1, 2014</time></a>
+                            </span>    
+                            
+                            <span class="posted-by"> 
+                            	by
+                            	<a class="url fn n" href="#" title="View all posts by Prashant Agrawal" rel="author">Prashant Agrawal</a>
+                            </span>
+                            
+                            <!--<span class="edit-link">
+                            	<a class="post-edit-link" href="#" title="Edit Post">Edit</a>
+                            </span>-->
+                            
+                      </div>
+
+                      <div class="featured-image">
+                        <img src="../images/blog/b1.png" alt="blog-image">
+                      </div>
+
+                      <div class="entry-content">
+
+			<!--[if lt IE 9]>
+				<p class="browsehappy alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" style="text-decoration: underline;">upgrade your browser</a> to improve your experience.</p>
+			<![endif]-->
+
+					<h1><strong>Cassandra</strong> vs <strong>MongoDB</strong> vs <strong>CouchDB</strong> vs <strong>Redis</strong> vs <strong>Riak</strong> vs <strong>HBase</strong> vs <strong>Couchbase</strong> vs <strong>Neo4j</strong> vs <strong>Hypertable</strong> vs <strong>ElasticSearch</strong> vs <strong>Accumulo</strong> vs <strong>VoltDB</strong> vs <strong>Scalaris</strong> comparison</h1>
+
+<p>(Yes it's a long title, since people kept asking me to write about this and that too :) I do when it has a point.)
+
+<style>
+.separatorline { border-top: 1px solid #5bc0de; border-bottom: 1px solid #5bc0de; text-align: center; margin-top: 22px; font-weight: bold;}
+</style>
+
+<p>While SQL databases are insanely useful tools, their monopoly in the last decades is coming to an end.
+And it's just time: I can't even count the things that were forced into relational databases,
+but never really fitted them. (That being said, relational databases will always be the best for the stuff
+that has <i>relations</i>.)
+ 
+<p>But, the differences between NoSQL databases are much bigger than ever was between one
+SQL database and another. This means that it is a bigger responsibility on
+<a href="/resume">software architects</a>
+to choose the appropriate one for a project right at the beginning.
+
+<p>In this light, here is a comparison of
+<a href="http://cassandra.apache.org/">Cassandra</a>,
+<a href="http://www.mongodb.org/">Mongodb</a>,
+<a href="http://couchdb.apache.org/">CouchDB</a>,
+<a href="http://redis.io/">Redis</a>,
+<a href="http://basho.com/riak/">Riak</a>,
+<a href="http://www.couchbase.org/membase">Couchbase (ex-Membase)</a>,
+<a href="http://hypertable.org">Hypertable</a>,
+<a href="http://www.elasticsearch.org/">ElasticSearch</a>,
+<a href="http://accumulo.apache.org/">Accumulo</a>,
+<a href="http://voltdb.com/">VoltDB</a>,
+<a href="http://fallabs.com/kyototycoon/">Kyoto Tycoon</a>,
+<a href="https://code.google.com/p/scalaris/">Scalaris</a>,
+<a href="http://neo4j.org/">Neo4j</a> and
+<a href="http://hbase.apache.org/">HBase</a>:
+
+<h3 class="separatorline">The most popular ones</h3>
+
+<div class="col-sm-6 alpha">
+	<h2>Redis (V2.8)</h2>
+	<ul>
+	<li><strong>Written in:</strong> C
+	<li><strong>Main point:</strong> Blazing fast
+	<li><strong>License:</strong> BSD
+	<li><strong>Protocol:</strong> Telnet-like, binary safe
+	<li>Disk-backed in-memory database,
+	<li>Dataset size limited to computer RAM (but can span multiple machines' RAM with clustering)
+	<li>Master-slave replication, automatic failover
+	<li>Simple values or data structures by keys
+	<li>but <a href="http://redis.io/commands">complex operations</a> like ZREVRANGEBYSCORE.
+	<li>INCR &amp; co (good for rate limiting or statistics)
+	<li>Bit operations (for example to implement bloom filters)
+	<li>Has sets (also union/diff/inter)
+	<li>Has lists (also a queue; blocking pop)
+	<li>Has hashes (objects of multiple fields)
+	<li>Sorted sets (high score table, good for range queries)
+	<li>Lua scripting capabilities (!)
+	<li>Has transactions (!)
+	<li>Values can be set to expire (as in a cache)
+	<li>Pub/Sub lets one implement messaging
+	</ul>
+	<p><strong>Best used:</strong>
+	For rapidly changing data with a foreseeable database size (should fit mostly in memory).
+	<p><strong>For example:</strong>
+	To store real-time stock prices. Real-time analytics. Leaderboards. Real-time communication. And wherever you used memcached before.
+
+	<h2>Cassandra (2.0)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Java
+	<li><strong>Main point:</strong> Store <i>huge</i> datasets in "almost" SQL
+	<li><strong>License:</strong> Apache
+	<li><strong>Protocol:</strong> CQL3 &amp; Thrift
+	<li>CQL3 is very similar SQL, but with some limitations that come from the scalability (most notably: no JOINs, no aggregate functions.)
+	<li>CQL3 is now the official interface. Don't look at Thrift, unless you're working on a legacy app. This way, you can live without understanding ColumnFamilies, SuperColumns, etc.
+	<li>Querying by key, or key range (secondary indices are also available)
+	<li>Tunable trade-offs for distribution and replication (N,&nbsp;R,&nbsp;W)
+	<li>Data can have expiration (set on INSERT).
+	<li>Writes can be much faster than reads (when reads are disk-bound)
+	<li>Map/reduce possible with Apache Hadoop
+	<li>All nodes are similar, as opposed to Hadoop/HBase
+	<li>Very good and reliable cross-datacenter replication
+	<li>Distributed counter datatype.
+	<li>You can write triggers in Java.
+	</ul>
+	<p><strong>Best used:</strong>
+	When you need to store data so huge that it doesn't fit on server, but still want a friendly familiar interface to it.
+	<p><strong>For example:</strong>
+	Web analytics, to count hits by hour, by browser, by IP, etc. Transaction logging. Data collection from huge sensor arrays.
+</div>
+
+<div class="col-sm-6 alpha">
+	<h2>MongoDB (2.2)</h2>
+	<ul>
+	<li><strong>Written in:</strong> C++
+	<li><strong>Main point:</strong> Retains some friendly properties of SQL. (Query, index)
+	<li><strong>License:</strong> AGPL (Drivers: Apache)
+	<li><strong>Protocol:</strong> Custom, binary (BSON)
+	<li>Master/slave replication (auto failover with replica sets)
+	<li>Sharding built-in
+	<li>Queries are javascript expressions
+	<li>Run arbitrary javascript functions server-side
+	<li>Better update-in-place than CouchDB
+	<li>Uses memory mapped files for data storage
+	<li>Performance over features
+	<li>Journaling (with --journal) is best turned on
+	<li>On 32bit systems, limited to ~2.5Gb 
+	<li>An empty database takes up 192Mb
+	<li>GridFS to store big data + metadata (not actually an FS)
+	<li>Has geospatial indexing
+	<li>Data center aware
+	</ul>
+	<p><strong>Best used:</strong>
+	If you need dynamic queries. If you prefer to define indexes, not map/reduce functions. If you need good performance on a big DB. If you wanted CouchDB, but your data changes too much, filling up disks.
+	<p><strong>For example:</strong>
+	For most things that you would do with MySQL or PostgreSQL, but having predefined columns really holds you back.
+
+	<h2>Riak (V1.2)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Erlang &amp; C, some JavaScript
+	<li><strong>Main point:</strong> Fault tolerance
+	<li><strong>License:</strong> Apache
+	<li><strong>Protocol:</strong> HTTP/REST or custom binary
+	<li>Stores blobs
+	<li>Tunable trade-offs for distribution and replication
+	<li>Pre- and post-commit hooks in JavaScript or Erlang, for validation and security.
+	<li>Map/reduce in JavaScript or Erlang
+	<li>Links &amp; link walking: use it as a graph database
+	<li>Secondary indices: but only one at once
+	<li>Large object support (Luwak)
+	<li>Comes in "open source" and "enterprise" editions
+	<li>Full-text search, indexing, querying with Riak Search
+	<li>In the process of migrating the storing backend from "Bitcask" to Google's "LevelDB"
+	<li>Masterless multi-site replication replication and SNMP monitoring are commercially licensed
+	</ul>
+	<p><strong>Best used:</strong>
+	If you want something Dynamo-like data storage, but no way you're gonna deal with the bloat and complexity. If you need very good single-site scalability, availability and fault-tolerance, but you're ready to pay for multi-site replication.
+	<p><strong>For example:</strong>
+	Point-of-sales data collection. Factory control systems. Places where even seconds of downtime hurt. Could be used as a well-update-able web server.
+</div>
+
+<div class="clearfix"></div>
+
+<h3 class="separatorline">Classic document and BigTable stores</h3>
+
+<div class="col-sm-6 alpha">
+	<h2>CouchDB (V1.2)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Erlang
+	<li><strong>Main point:</strong> DB consistency, ease of use
+	<li><strong>License:</strong> Apache
+	<li><strong>Protocol:</strong> HTTP/REST
+	<li>Bi-directional (!) replication,
+	<li>continuous or ad-hoc,
+	<li>with conflict detection,
+	<li>thus, master-master replication. (!)
+	<li>MVCC - write operations do not block reads
+	<li>Previous versions of documents are available
+	<li>Crash-only (reliable) design
+	<li>Needs compacting from time to time
+	<li>Views: embedded map/reduce
+	<li>Formatting views: lists &amp; shows
+	<li>Server-side document validation possible
+	<li>Authentication possible
+	<li>Real-time updates via '_changes' (!)
+	<li>Attachment handling
+	<li>thus, <a href="http://couchapp.org/">CouchApps</a> (standalone js apps)
+	</ul>
+	<p><strong>Best used:</strong>
+	For accumulating, occasionally changing data, on which pre-defined queries are to be run. Places where versioning is important.
+	<p><strong>For example:</strong>
+	CRM, CMS systems. Master-master replication is an especially interesting feature, allowing easy multi-site deployments. 
+
+	<h2>Accumulo (1.4)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Java and C++
+	<li><strong>Main point:</strong> A BigTable with Cell-level security
+	<li><strong>License:</strong> Apache
+	<li><strong>Protocol:</strong> Thrift
+	<li>Another BigTable clone, also runs of top of Hadoop
+	<li>Originally from the NSA
+	<li>Cell-level security
+	<li>Bigger rows than memory are allowed
+	<li>Keeps a memory map outside Java, in C++ STL
+	<li>Map/reduce using Hadoop's facitlities (ZooKeeper &amp; co)
+	<li>Some server-side programming
+	</ul>
+	<p><strong>Best used:</strong>
+	If you need to restict access on the cell level.
+	<p><strong>For example:</strong>
+	Same as HBase, since it's basically a replacement: Search engines. Analysing log data. Any place where scanning huge, two-dimensional join-less tables are a requirement.
+</div>
+
+<div class="col-sm-6 alpha">
+	<h2>HBase (V0.92.0)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Java
+	<li><strong>Main point:</strong> Billions of rows X millions of columns
+	<li><strong>License:</strong> Apache
+	<li><strong>Protocol:</strong> HTTP/REST (also Thrift)
+	<li>Modeled after Google's BigTable
+	<li>Uses Hadoop's HDFS as storage
+	<li>Map/reduce with Hadoop
+	<li>Query predicate push down via server side scan and get filters
+	<li>Optimizations for real time queries
+	<li>A high performance Thrift gateway
+	<li>HTTP supports XML, Protobuf, and binary
+	<li>Jruby-based (JIRB) shell
+	<li>Rolling restart for configuration changes and minor upgrades
+	<li>Random access performance is like MySQL
+	<li>A cluster consists of several different types of nodes
+	</ul>
+	<p><strong>Best used:</strong>
+	Hadoop is probably still the best way to run Map/Reduce jobs on huge datasets. Best if you use the Hadoop/HDFS stack already.
+	<p><strong>For example:</strong>
+	Search engines. Analysing log data. Any place where scanning huge, two-dimensional join-less tables are a requirement.
+
+	<h2>Hypertable (0.9.6.5)</h2>
+	<ul>
+	<li><strong>Written in:</strong> C++
+	<li><strong>Main point:</strong> A faster, smaller HBase
+	<li><strong>License:</strong> GPL 2.0
+	<li><strong>Protocol:</strong> Thrift, C++ library, or HQL shell
+	<li>Implements Google's BigTable design
+	<li>Run on Hadoop's HDFS
+	<li>Uses its own, "SQL-like" language, HQL
+	<li>Can search by key, by cell, or for values in column families.
+	<li>Search can be limited to key/column ranges.
+	<li>Sponsored by Baidu
+	<li>Retains the last N historical values
+	<li>Tables are in namespaces
+	<li>Map/reduce with Hadoop
+	</ul>
+	<p><strong>Best used:</strong>
+	If you need a better HBase.</p>
+	<p><strong>For example:</strong>
+	Same as HBase, since it's basically a replacement: Search engines. Analysing log data. Any place where scanning huge, two-dimensional join-less tables are a requirement.</p>
+	<br>
+	<br>
+</div>
+
+<div class="clearfix"></div>
+<h3 class="separatorline">Special-purpose</h3>
+
+<div class="col-sm-6 alpha">
+	<h2>Neo4j (V1.5M02)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Java
+	<li><strong>Main point:</strong> Graph database - connected data
+	<li><strong>License:</strong> GPL, some features AGPL/commercial
+	<li><strong>Protocol:</strong> HTTP/REST (or embedding in Java)
+	<li>Standalone, or embeddable into Java applications
+	<li>Full ACID conformity (including durable data)
+	<li>Both nodes and relationships can have metadata
+	<li>Integrated pattern-matching-based query language ("Cypher")
+	<li>Also the "Gremlin" graph traversal language can be used
+	<li>Indexing of nodes and relationships
+	<li>Nice self-contained web admin
+	<li>Advanced path-finding with multiple algorithms
+	<li>Indexing of keys and relationships
+	<li>Optimized for reads
+	<li>Has transactions (in the Java API)
+	<li>Scriptable in Groovy
+	<li>Online backup, advanced monitoring and High Availability is AGPL/commercial licensed
+	</ul>
+	<p><strong>Best used:</strong>
+	For graph-style, rich or complex, interconnected data. Neo4j is quite different from the others in this sense.</p>
+	<p><strong>For example:</strong>
+	For searching routes in social relations, public transport links, road maps, or network topologies.</p>
+</div>
+
+<div class="col-sm-6 alpha">
+	<h2>ElasticSearch (0.20.1)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Java
+	<li><strong>Main point:</strong> Advanced Search
+	<li><strong>License:</strong> Apache
+	<li><strong>Protocol:</strong> JSON over HTTP (Plugins: Thrift, memcached)
+	<li>Stores JSON documents
+	<li>Has versioning
+	<li>Parent and children documents
+	<li>Documents can time out
+	<li>Very versatile and sophisticated querying, scriptable
+	<li>Write consistency: one, quorum or all
+	<li>Sorting by score (!)
+	<li>Geo distance sorting
+	<li>Fuzzy searches (approximate date, etc) (!)
+	<li>Asynchronous replication
+	<li>Atomic, scripted updates (good for counters, etc)
+	<li>Can maintain automatic "stats groups" (good for debugging)
+	<li>Still depends very much on only one developer (kimchy).
+	</ul>
+	<p><strong>Best used:</strong>
+	When you have objects with (flexible) fields, and you need "advanced search" functionality.</p>
+	<p><strong>For example:</strong>
+	A dating service that handles age difference, geographic location, tastes and dislikes, etc. Or a leaderboard system that depends on many variables.</p>
+	<br>
+<br><br>
+<br>
+<br><br>
+<br>
+</div>
+
+<div class="clearfix"></div>
+<h3 class="separatorline">The "long tail" (Not widely known, but definitely worthy ones)</h3>
+
+<div class="col-sm-6 alpha">
+	<h2>Couchbase (ex-Membase) (2.0)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Erlang &amp; C
+	<li><strong>Main point:</strong>  Memcache compatible, but with persistence and clustering
+	<li><strong>License:</strong>  Apache
+	<li><strong>Protocol:</strong>  memcached + extensions
+	<li>Very fast (200k+/sec) access of data by key
+	<li>Persistence to disk
+	<li>All nodes are identical (master-master replication)
+	<li>Provides memcached-style in-memory caching buckets, too
+	<li>Write de-duplication to reduce IO
+	<li>Friendly cluster-management web GUI
+	<li>Connection proxy for connection pooling and multiplexing (Moxi)
+	<li>Incremental map/reduce
+	<li>Cross-datacenter replication
+	</ul>
+	<p><strong>Best used:</strong>
+	Any application where low-latency data access, high concurrency support and high availability is a requirement.
+	<p><strong>For example:</strong>
+	Low-latency use-cases like ad targeting or highly-concurrent web apps like online gaming (e.g. Zynga).
+
+	<h2>Scalaris (0.5)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Erlang
+	<li><strong>Main point:</strong> Distributed P2P key-value store
+	<li><strong>License:</strong> Apache
+	<li><strong>Protocol:</strong> Proprietary &amp; JSON-RPC
+	<li>In-memory (disk when using Tokyo Cabinet as a backend)
+	<li>Uses YAWS as a web server
+	<li>Has transactions (an adapted Paxos commit)
+	<li>Consistent, distributed write operations
+	<li>From CAP, values Consistency over Availability (in case of network partitioning, only the bigger partition works)
+	</ul>
+	<p><strong>Best used:</strong>
+	If you like Erlang and wanted to use Mnesia or DETS or ETS, but you need something that is accessible from more languages (and scales much better than ETS or DETS).
+	<p><strong>For example:</strong>
+	In an Erlang-based system when you want to give access to the DB to Python, Ruby or Java programmers.
+
+</div>
+
+<div class="col-sm-6 alpha">
+	<h2>VoltDB (2.8.4.1)</h2>
+	<ul>
+	<li><strong>Written in:</strong> Java
+	<li><strong>Main point:</strong> Fast transactions and rapidly changing data
+	<li><strong>License:</strong> GPL 3
+	<li><strong>Protocol:</strong> Proprietary
+	<li>In-memory <strong>relational</strong> database.
+	<li>Can export data into Hadoop
+	<li>Supports ANSI SQL
+	<li>Stored procedures in Java
+	<li>Cross-datacenter replication
+	</ul>
+	<p><strong>Best used:</strong>
+	Where you need to act fast on massive amounts of incoming data.
+	<p><strong>For example:</strong>
+	Point-of-sales data analysis. Factory control systems.
+
+	<h2>Kyoto Tycoon (0.9.56)</h2>
+	<ul>
+	<li><strong>Written in:</strong> C++
+	<li><strong>Main point:</strong> A lightweight network DBM
+	<li><strong>License:</strong> GPL
+	<li><strong>Protocol:</strong> HTTP (TSV-RPC or REST)
+	<li>Based on Kyoto Cabinet, Tokyo Cabinet's successor
+	<li>Multitudes of storage backends: Hash, Tree, Dir, etc (everything from Kyoto Cabinet)
+	<li>Kyoto Cabinet can do 1M+ insert/select operations per sec (but Tycoon does less because of overhead)
+	<li>Lua on the server side
+	<li>Language bindings for C, Java, Python, Ruby, Perl, Lua, etc
+	<li>Uses the "visitor" pattern
+	<li>Hot backup, asynchronous replication
+	<li>background snapshot of in-memory databases
+	<li>Auto expiration (can be used as a cache server)
+	</ul>
+	<p><strong>Best used:</strong>
+	When you want to choose the backend storage algorithm engine very precisely. When speed is of the essence.
+	<p><strong>For example:</strong>
+	Caching server. Stock prices. Analytics. Real-time data collection. Real-time communication. And wherever you used memcached before.
+<br>
+<br><br><br><br><br><br><br><br>
+	<!--
+	<h2>OrientDB</h2>
+	<ul>
+	<li><strong>Written in:</strong> Java
+	<li><strong>Main point:</strong> Document-based graph database
+	<li><strong>License:</strong> Apache 2.0
+	<li><strong>Protocol:</strong>
+	<li>
+	<li>Has transactions
+	<li>Not yet distributed (?)
+	</ul>
+	<p><strong>Best used:</strong>
+
+	<p><strong>For example:</strong>
+	-->
+</div>
+                         
+                            <!-- .project-action
+							
+                            <div class="project-action">
+                                <a href="#" class="button button-icon big blue"><i class="fa fa-cloud-download"></i>DOWNLOAD</a>
+                                <a href="#" class="button button-icon big grass"><i class="fa fa-eye"></i>PREVIEW</a>
+                                <a href="#" class="button button-icon big red"><i class="fa fa-github"></i>GITHUB</a>
+                            </div>
+                              
+							  project-action -->                      
+                        
+                      </div>
+          
+                    </article>
+<!--
+                    <nav class="nav-single row">
+                    
+                        <div class="nav-previous col-sm-6">
+                            <h4>PREVIOUS POST</h4>
+                            <a href="#" rel="prev"><span class="meta-nav">←</span> Adding A Personal Touch To Your Web Design</a>
+                        </div>
+                        
+                        <div class="nav-next col-sm-6">
+                            <h4>NEXT POST</h4>
+                            <a href="#" rel="next">How To Build Long-Term Client Relationships <span class="meta-nav">→</span></a>
+                        </div>
+                        
+                    </nav>
+-->
+                    <!-- #comments -->
+                    <div id="comments" class="comments-area">
+					    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'agrawalprashant'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+                    </div>
+                    <!-- #comments --> 
+
+                </div>
+                
+			</div>
+
+		</div>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/nprogress/nprogress.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false" defer='defer'></script>
+        <script src="../js/main.js"></script>
+
+	</body>
+</html>
