@@ -655,11 +655,30 @@
   var _weq = _weq || {};
   _weq['webengage.licenseCode'] = '82616ddc';
   _weq['webengage.widgetVersion'] = "4.0";
-  _weq['webengage.enableCallbacks'] = true;
-  _weq['webengage.notification.onOpen'] = function () {
-    console.log('hola');
-    $('iframe').animate({"left": "800px"},"slow");
-    console.log('done',$('div'));
+  _weq["webengage.enableCallbacks"] = true;
+_weq["webengage.notification.onOpen"] = function(data){
+ var bodyElem = $weJQuery("#webklipper-publisher-widget-container-notification-frame").contents().find('body');        
+ var nbP = $weJQuery('.container p', bodyElem).length;
+var w = parseInt($weJQuery('.container p', bodyElem).css("width"));
+var max = (nbP - 1) * w;
+$weJQuery("ul li[data-num='1']", bodyElem).addClass('active');
+$weJQuery('.step span', bodyElem).html('Step 1');
+
+  $weJQuery('.btn', bodyElem).click(function(){
+  var margL = parseInt($weJQuery('.slider-turn', bodyElem).css('margin-left'));
+  var modulo = margL%w;
+  if (-margL < max && modulo == 0) {
+    margL -= w;
+ 
+    $weJQuery('.slider-turn', bodyElem).animate({
+      'margin-left':margL
+    },300);
+    $weJQuery('ul li.active', bodyElem).addClass('true').removeClass('active');
+    var x = -margL/w +1;
+    $weJQuery('ul li[data-num="'+x+'"]', bodyElem).addClass('active');
+    $weJQuery('.step span', bodyElem).html("Step "+x);
+  }
+});
 };
   (function(d){
     var _we = d.createElement('script');
