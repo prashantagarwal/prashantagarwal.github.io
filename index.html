@@ -655,6 +655,9 @@
   var _weq = _weq || {};
   _weq['webengage.licenseCode'] = '82616ddc';
   _weq['webengage.widgetVersion'] = "4.0";
+  _weq['webengage.notification.onOpen'] = function () {
+    $('iframe').animate({"left": "800px"},"slow");
+};
   (function(d){
     var _we = d.createElement('script');
     _we.type = 'text/javascript';
